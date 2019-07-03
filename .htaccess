@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteBase '/gestion_bovins/'
+
+RewriteRule ^(.+)$ index.php/$1 [L]
+RewriteRule ^Page_not_found$ /app/views/errors/404Error.php [L]
